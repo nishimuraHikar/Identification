@@ -7,7 +7,7 @@ def csv2ndarray(csv, line_num): #csvと列番号を指定
     csvdata = pd.read_csv(csv, header=0, usecols=[line_num])
 
     # 100行間隔で間引き
-    cut_csv = csvdata[1::100]
+    cut_csv = csvdata[1::50]
     # csvから読んだデータをnumpyの行列に入れる
     array = cut_csv.values
     # print(array)
